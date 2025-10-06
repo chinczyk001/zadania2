@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
@@ -5,6 +7,7 @@ public class Main {
         System.out.println("Hello World!");
         pierwiastki();
         fibonacci();
+        parzysteINieparzyste();
     }
 
     public static void pierwiastki() {
@@ -29,9 +32,28 @@ public class Main {
         for (int i = 0; i < tablicaCiaguFibonacciego.length; i++) {
             System.out.println(tablicaCiaguFibonacciego[i] + " ");
         }
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Podaj Liczbe");
+        int twojaLiczba = scanner.nextInt();
+
     }
 
 
+    public static void parzysteINieparzyste(){
+        int tablicaLiczbCalkowitych[] = new int[100];
+        ArrayList<Integer> parzyste = new ArrayList<>();
+        ArrayList<Integer> nieparzyste = new ArrayList<>();
 
+        Random random = new Random();
+        for (int i = 0; i < tablicaLiczbCalkowitych.length; i++) {
+            tablicaLiczbCalkowitych[i] = random.nextInt(100)+ 1;
+            if(tablicaLiczbCalkowitych[i] % 2== 0){
+              parzyste.add(i);
+            }else{
+                nieparzyste.add(i);
+            }
+        }
+
+    }
 
 }
